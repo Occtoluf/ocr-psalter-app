@@ -1,0 +1,878 @@
+{
+  "_total": 167,
+  "tokenization": "char-level; combining marks are separate classes",
+  "classes": [
+    {
+      "idx": 0,
+      "char": "<blank>",
+      "name": "CTC blank"
+    },
+    {
+      "idx": 1,
+      "char": " ",
+      "name": "SPACE"
+    },
+    {
+      "idx": 2,
+      "char": "!",
+      "name": "EXCLAMATION MARK"
+    },
+    {
+      "idx": 3,
+      "char": "(",
+      "name": "LEFT PARENTHESIS"
+    },
+    {
+      "idx": 4,
+      "char": ")",
+      "name": "RIGHT PARENTHESIS"
+    },
+    {
+      "idx": 5,
+      "char": ",",
+      "name": "COMMA"
+    },
+    {
+      "idx": 6,
+      "char": "-",
+      "name": "HYPHEN-MINUS"
+    },
+    {
+      "idx": 7,
+      "char": ".",
+      "name": "FULL STOP"
+    },
+    {
+      "idx": 8,
+      "char": ":",
+      "name": "COLON"
+    },
+    {
+      "idx": 9,
+      "char": ";",
+      "name": "SEMICOLON"
+    },
+    {
+      "idx": 10,
+      "char": "=",
+      "name": "EQUALS SIGN"
+    },
+    {
+      "idx": 11,
+      "char": "[",
+      "name": "LEFT SQUARE BRACKET"
+    },
+    {
+      "idx": 12,
+      "char": "]",
+      "name": "RIGHT SQUARE BRACKET"
+    },
+    {
+      "idx": 13,
+      "char": "_",
+      "name": "LOW LINE"
+    },
+    {
+      "idx": 14,
+      "char": "«",
+      "name": "LEFT-POINTING DOUBLE ANGLE QUOTATION MARK"
+    },
+    {
+      "idx": 15,
+      "char": "»",
+      "name": "RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK"
+    },
+    {
+      "idx": 16,
+      "char": "҂",
+      "name": "CYRILLIC THOUSANDS SIGN"
+    },
+    {
+      "idx": 17,
+      "char": "‑",
+      "name": "NON-BREAKING HYPHEN"
+    },
+    {
+      "idx": 18,
+      "char": "꙳",
+      "name": "SLAVONIC ASTERISK"
+    },
+    {
+      "idx": 19,
+      "char": "꙾",
+      "name": "CYRILLIC KAVYKA"
+    },
+    {
+      "idx": 20,
+      "char": "🕀",
+      "name": "CIRCLED CROSS POMMEE"
+    },
+    {
+      "idx": 21,
+      "char": "🕁",
+      "name": "CROSS POMMEE WITH HALF-CIRCLE BELOW"
+    },
+    {
+      "idx": 22,
+      "char": "🕂",
+      "name": "CROSS POMMEE"
+    },
+    {
+      "idx": 23,
+      "char": "🕃",
+      "name": "NOTCHED LEFT SEMICIRCLE WITH THREE DOTS"
+    },
+    {
+      "idx": 24,
+      "char": "🕅",
+      "name": "SYMBOL FOR MARKS CHAPTER"
+    },
+    {
+      "idx": 25,
+      "char": "I",
+      "name": "LATIN CAPITAL LETTER I"
+    },
+    {
+      "idx": 26,
+      "char": "Ѐ",
+      "name": "CYRILLIC CAPITAL LETTER IE WITH GRAVE"
+    },
+    {
+      "idx": 27,
+      "char": "Є",
+      "name": "CYRILLIC CAPITAL LETTER UKRAINIAN IE"
+    },
+    {
+      "idx": 28,
+      "char": "Ѕ",
+      "name": "CYRILLIC CAPITAL LETTER DZE"
+    },
+    {
+      "idx": 29,
+      "char": "І",
+      "name": "CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I"
+    },
+    {
+      "idx": 30,
+      "char": "Ї",
+      "name": "CYRILLIC CAPITAL LETTER YI"
+    },
+    {
+      "idx": 31,
+      "char": "Ѝ",
+      "name": "CYRILLIC CAPITAL LETTER I WITH GRAVE"
+    },
+    {
+      "idx": 32,
+      "char": "А",
+      "name": "CYRILLIC CAPITAL LETTER A"
+    },
+    {
+      "idx": 33,
+      "char": "Б",
+      "name": "CYRILLIC CAPITAL LETTER BE"
+    },
+    {
+      "idx": 34,
+      "char": "В",
+      "name": "CYRILLIC CAPITAL LETTER VE"
+    },
+    {
+      "idx": 35,
+      "char": "Г",
+      "name": "CYRILLIC CAPITAL LETTER GHE"
+    },
+    {
+      "idx": 36,
+      "char": "Д",
+      "name": "CYRILLIC CAPITAL LETTER DE"
+    },
+    {
+      "idx": 37,
+      "char": "Е",
+      "name": "CYRILLIC CAPITAL LETTER IE"
+    },
+    {
+      "idx": 38,
+      "char": "Ж",
+      "name": "CYRILLIC CAPITAL LETTER ZHE"
+    },
+    {
+      "idx": 39,
+      "char": "З",
+      "name": "CYRILLIC CAPITAL LETTER ZE"
+    },
+    {
+      "idx": 40,
+      "char": "И",
+      "name": "CYRILLIC CAPITAL LETTER I"
+    },
+    {
+      "idx": 41,
+      "char": "Й",
+      "name": "CYRILLIC CAPITAL LETTER SHORT I"
+    },
+    {
+      "idx": 42,
+      "char": "К",
+      "name": "CYRILLIC CAPITAL LETTER KA"
+    },
+    {
+      "idx": 43,
+      "char": "Л",
+      "name": "CYRILLIC CAPITAL LETTER EL"
+    },
+    {
+      "idx": 44,
+      "char": "М",
+      "name": "CYRILLIC CAPITAL LETTER EM"
+    },
+    {
+      "idx": 45,
+      "char": "Н",
+      "name": "CYRILLIC CAPITAL LETTER EN"
+    },
+    {
+      "idx": 46,
+      "char": "О",
+      "name": "CYRILLIC CAPITAL LETTER O"
+    },
+    {
+      "idx": 47,
+      "char": "П",
+      "name": "CYRILLIC CAPITAL LETTER PE"
+    },
+    {
+      "idx": 48,
+      "char": "Р",
+      "name": "CYRILLIC CAPITAL LETTER ER"
+    },
+    {
+      "idx": 49,
+      "char": "С",
+      "name": "CYRILLIC CAPITAL LETTER ES"
+    },
+    {
+      "idx": 50,
+      "char": "Т",
+      "name": "CYRILLIC CAPITAL LETTER TE"
+    },
+    {
+      "idx": 51,
+      "char": "У",
+      "name": "CYRILLIC CAPITAL LETTER U"
+    },
+    {
+      "idx": 52,
+      "char": "Ф",
+      "name": "CYRILLIC CAPITAL LETTER EF"
+    },
+    {
+      "idx": 53,
+      "char": "Х",
+      "name": "CYRILLIC CAPITAL LETTER HA"
+    },
+    {
+      "idx": 54,
+      "char": "Ц",
+      "name": "CYRILLIC CAPITAL LETTER TSE"
+    },
+    {
+      "idx": 55,
+      "char": "Ч",
+      "name": "CYRILLIC CAPITAL LETTER CHE"
+    },
+    {
+      "idx": 56,
+      "char": "Ш",
+      "name": "CYRILLIC CAPITAL LETTER SHA"
+    },
+    {
+      "idx": 57,
+      "char": "Щ",
+      "name": "CYRILLIC CAPITAL LETTER SHCHA"
+    },
+    {
+      "idx": 58,
+      "char": "Ъ",
+      "name": "CYRILLIC CAPITAL LETTER HARD SIGN"
+    },
+    {
+      "idx": 59,
+      "char": "Ы",
+      "name": "CYRILLIC CAPITAL LETTER YERU"
+    },
+    {
+      "idx": 60,
+      "char": "Ь",
+      "name": "CYRILLIC CAPITAL LETTER SOFT SIGN"
+    },
+    {
+      "idx": 61,
+      "char": "Э",
+      "name": "CYRILLIC CAPITAL LETTER E"
+    },
+    {
+      "idx": 62,
+      "char": "Ю",
+      "name": "CYRILLIC CAPITAL LETTER YU"
+    },
+    {
+      "idx": 63,
+      "char": "а",
+      "name": "CYRILLIC SMALL LETTER A"
+    },
+    {
+      "idx": 64,
+      "char": "б",
+      "name": "CYRILLIC SMALL LETTER BE"
+    },
+    {
+      "idx": 65,
+      "char": "в",
+      "name": "CYRILLIC SMALL LETTER VE"
+    },
+    {
+      "idx": 66,
+      "char": "г",
+      "name": "CYRILLIC SMALL LETTER GHE"
+    },
+    {
+      "idx": 67,
+      "char": "д",
+      "name": "CYRILLIC SMALL LETTER DE"
+    },
+    {
+      "idx": 68,
+      "char": "е",
+      "name": "CYRILLIC SMALL LETTER IE"
+    },
+    {
+      "idx": 69,
+      "char": "ж",
+      "name": "CYRILLIC SMALL LETTER ZHE"
+    },
+    {
+      "idx": 70,
+      "char": "з",
+      "name": "CYRILLIC SMALL LETTER ZE"
+    },
+    {
+      "idx": 71,
+      "char": "и",
+      "name": "CYRILLIC SMALL LETTER I"
+    },
+    {
+      "idx": 72,
+      "char": "й",
+      "name": "CYRILLIC SMALL LETTER SHORT I"
+    },
+    {
+      "idx": 73,
+      "char": "к",
+      "name": "CYRILLIC SMALL LETTER KA"
+    },
+    {
+      "idx": 74,
+      "char": "л",
+      "name": "CYRILLIC SMALL LETTER EL"
+    },
+    {
+      "idx": 75,
+      "char": "м",
+      "name": "CYRILLIC SMALL LETTER EM"
+    },
+    {
+      "idx": 76,
+      "char": "н",
+      "name": "CYRILLIC SMALL LETTER EN"
+    },
+    {
+      "idx": 77,
+      "char": "о",
+      "name": "CYRILLIC SMALL LETTER O"
+    },
+    {
+      "idx": 78,
+      "char": "п",
+      "name": "CYRILLIC SMALL LETTER PE"
+    },
+    {
+      "idx": 79,
+      "char": "р",
+      "name": "CYRILLIC SMALL LETTER ER"
+    },
+    {
+      "idx": 80,
+      "char": "с",
+      "name": "CYRILLIC SMALL LETTER ES"
+    },
+    {
+      "idx": 81,
+      "char": "т",
+      "name": "CYRILLIC SMALL LETTER TE"
+    },
+    {
+      "idx": 82,
+      "char": "у",
+      "name": "CYRILLIC SMALL LETTER U"
+    },
+    {
+      "idx": 83,
+      "char": "ф",
+      "name": "CYRILLIC SMALL LETTER EF"
+    },
+    {
+      "idx": 84,
+      "char": "х",
+      "name": "CYRILLIC SMALL LETTER HA"
+    },
+    {
+      "idx": 85,
+      "char": "ц",
+      "name": "CYRILLIC SMALL LETTER TSE"
+    },
+    {
+      "idx": 86,
+      "char": "ч",
+      "name": "CYRILLIC SMALL LETTER CHE"
+    },
+    {
+      "idx": 87,
+      "char": "ш",
+      "name": "CYRILLIC SMALL LETTER SHA"
+    },
+    {
+      "idx": 88,
+      "char": "щ",
+      "name": "CYRILLIC SMALL LETTER SHCHA"
+    },
+    {
+      "idx": 89,
+      "char": "ъ",
+      "name": "CYRILLIC SMALL LETTER HARD SIGN"
+    },
+    {
+      "idx": 90,
+      "char": "ы",
+      "name": "CYRILLIC SMALL LETTER YERU"
+    },
+    {
+      "idx": 91,
+      "char": "ь",
+      "name": "CYRILLIC SMALL LETTER SOFT SIGN"
+    },
+    {
+      "idx": 92,
+      "char": "ю",
+      "name": "CYRILLIC SMALL LETTER YU"
+    },
+    {
+      "idx": 93,
+      "char": "я",
+      "name": "CYRILLIC SMALL LETTER YA"
+    },
+    {
+      "idx": 94,
+      "char": "ѐ",
+      "name": "CYRILLIC SMALL LETTER IE WITH GRAVE"
+    },
+    {
+      "idx": 95,
+      "char": "ѓ",
+      "name": "CYRILLIC SMALL LETTER GJE"
+    },
+    {
+      "idx": 96,
+      "char": "є",
+      "name": "CYRILLIC SMALL LETTER UKRAINIAN IE"
+    },
+    {
+      "idx": 97,
+      "char": "ѕ",
+      "name": "CYRILLIC SMALL LETTER DZE"
+    },
+    {
+      "idx": 98,
+      "char": "і",
+      "name": "CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I"
+    },
+    {
+      "idx": 99,
+      "char": "ї",
+      "name": "CYRILLIC SMALL LETTER YI"
+    },
+    {
+      "idx": 100,
+      "char": "ќ",
+      "name": "CYRILLIC SMALL LETTER KJE"
+    },
+    {
+      "idx": 101,
+      "char": "ѝ",
+      "name": "CYRILLIC SMALL LETTER I WITH GRAVE"
+    },
+    {
+      "idx": 102,
+      "char": "Ѡ",
+      "name": "CYRILLIC CAPITAL LETTER OMEGA"
+    },
+    {
+      "idx": 103,
+      "char": "ѡ",
+      "name": "CYRILLIC SMALL LETTER OMEGA"
+    },
+    {
+      "idx": 104,
+      "char": "Ѣ",
+      "name": "CYRILLIC CAPITAL LETTER YAT"
+    },
+    {
+      "idx": 105,
+      "char": "ѣ",
+      "name": "CYRILLIC SMALL LETTER YAT"
+    },
+    {
+      "idx": 106,
+      "char": "Ѧ",
+      "name": "CYRILLIC CAPITAL LETTER LITTLE YUS"
+    },
+    {
+      "idx": 107,
+      "char": "ѧ",
+      "name": "CYRILLIC SMALL LETTER LITTLE YUS"
+    },
+    {
+      "idx": 108,
+      "char": "Ѫ",
+      "name": "CYRILLIC CAPITAL LETTER BIG YUS"
+    },
+    {
+      "idx": 109,
+      "char": "Ѯ",
+      "name": "CYRILLIC CAPITAL LETTER KSI"
+    },
+    {
+      "idx": 110,
+      "char": "ѯ",
+      "name": "CYRILLIC SMALL LETTER KSI"
+    },
+    {
+      "idx": 111,
+      "char": "Ѱ",
+      "name": "CYRILLIC CAPITAL LETTER PSI"
+    },
+    {
+      "idx": 112,
+      "char": "ѱ",
+      "name": "CYRILLIC SMALL LETTER PSI"
+    },
+    {
+      "idx": 113,
+      "char": "Ѳ",
+      "name": "CYRILLIC CAPITAL LETTER FITA"
+    },
+    {
+      "idx": 114,
+      "char": "ѳ",
+      "name": "CYRILLIC SMALL LETTER FITA"
+    },
+    {
+      "idx": 115,
+      "char": "Ѵ",
+      "name": "CYRILLIC CAPITAL LETTER IZHITSA"
+    },
+    {
+      "idx": 116,
+      "char": "ѵ",
+      "name": "CYRILLIC SMALL LETTER IZHITSA"
+    },
+    {
+      "idx": 117,
+      "char": "Ѷ",
+      "name": "CYRILLIC CAPITAL LETTER IZHITSA WITH DOUBLE GRAVE ACCENT"
+    },
+    {
+      "idx": 118,
+      "char": "ѷ",
+      "name": "CYRILLIC SMALL LETTER IZHITSA WITH DOUBLE GRAVE ACCENT"
+    },
+    {
+      "idx": 119,
+      "char": "Ѻ",
+      "name": "CYRILLIC CAPITAL LETTER ROUND OMEGA"
+    },
+    {
+      "idx": 120,
+      "char": "ѻ",
+      "name": "CYRILLIC SMALL LETTER ROUND OMEGA"
+    },
+    {
+      "idx": 121,
+      "char": "Ѽ",
+      "name": "CYRILLIC CAPITAL LETTER OMEGA WITH TITLO"
+    },
+    {
+      "idx": 122,
+      "char": "ѽ",
+      "name": "CYRILLIC SMALL LETTER OMEGA WITH TITLO"
+    },
+    {
+      "idx": 123,
+      "char": "Ѿ",
+      "name": "CYRILLIC CAPITAL LETTER OT"
+    },
+    {
+      "idx": 124,
+      "char": "ѿ",
+      "name": "CYRILLIC SMALL LETTER OT"
+    },
+    {
+      "idx": 125,
+      "char": "ᲂ",
+      "name": "CYRILLIC SMALL LETTER NARROW O"
+    },
+    {
+      "idx": 126,
+      "char": "Ꙋ",
+      "name": "CYRILLIC CAPITAL LETTER MONOGRAPH UK"
+    },
+    {
+      "idx": 127,
+      "char": "ꙋ",
+      "name": "CYRILLIC SMALL LETTER MONOGRAPH UK"
+    },
+    {
+      "idx": 128,
+      "char": "Ꙗ",
+      "name": "CYRILLIC CAPITAL LETTER IOTIFIED A"
+    },
+    {
+      "idx": 129,
+      "char": "ꙗ",
+      "name": "CYRILLIC SMALL LETTER IOTIFIED A"
+    },
+    {
+      "idx": 130,
+      "char": "̀",
+      "name": "COMBINING GRAVE ACCENT"
+    },
+    {
+      "idx": 131,
+      "char": "́",
+      "name": "COMBINING ACUTE ACCENT"
+    },
+    {
+      "idx": 132,
+      "char": "̆",
+      "name": "COMBINING BREVE"
+    },
+    {
+      "idx": 133,
+      "char": "̑",
+      "name": "COMBINING INVERTED BREVE"
+    },
+    {
+      "idx": 134,
+      "char": "̾",
+      "name": "COMBINING VERTICAL TILDE"
+    },
+    {
+      "idx": 135,
+      "char": "҃",
+      "name": "COMBINING CYRILLIC TITLO"
+    },
+    {
+      "idx": 136,
+      "char": "҆",
+      "name": "COMBINING CYRILLIC PSILI PNEUMATA"
+    },
+    {
+      "idx": 137,
+      "char": "҇",
+      "name": "COMBINING CYRILLIC POKRYTIE"
+    },
+    {
+      "idx": 138,
+      "char": "ⷠ",
+      "name": "COMBINING CYRILLIC LETTER BE"
+    },
+    {
+      "idx": 139,
+      "char": "ⷡ",
+      "name": "COMBINING CYRILLIC LETTER VE"
+    },
+    {
+      "idx": 140,
+      "char": "ⷢ",
+      "name": "COMBINING CYRILLIC LETTER GHE"
+    },
+    {
+      "idx": 141,
+      "char": "ⷣ",
+      "name": "COMBINING CYRILLIC LETTER DE"
+    },
+    {
+      "idx": 142,
+      "char": "ⷤ",
+      "name": "COMBINING CYRILLIC LETTER ZHE"
+    },
+    {
+      "idx": 143,
+      "char": "ⷥ",
+      "name": "COMBINING CYRILLIC LETTER ZE"
+    },
+    {
+      "idx": 144,
+      "char": "ⷦ",
+      "name": "COMBINING CYRILLIC LETTER KA"
+    },
+    {
+      "idx": 145,
+      "char": "ⷧ",
+      "name": "COMBINING CYRILLIC LETTER EL"
+    },
+    {
+      "idx": 146,
+      "char": "ⷨ",
+      "name": "COMBINING CYRILLIC LETTER EM"
+    },
+    {
+      "idx": 147,
+      "char": "ⷩ",
+      "name": "COMBINING CYRILLIC LETTER EN"
+    },
+    {
+      "idx": 148,
+      "char": "ⷪ",
+      "name": "COMBINING CYRILLIC LETTER O"
+    },
+    {
+      "idx": 149,
+      "char": "ⷬ",
+      "name": "COMBINING CYRILLIC LETTER ER"
+    },
+    {
+      "idx": 150,
+      "char": "ⷭ",
+      "name": "COMBINING CYRILLIC LETTER ES"
+    },
+    {
+      "idx": 151,
+      "char": "ⷯ",
+      "name": "COMBINING CYRILLIC LETTER HA"
+    },
+    {
+      "idx": 152,
+      "char": "ⷱ",
+      "name": "COMBINING CYRILLIC LETTER CHE"
+    },
+    {
+      "idx": 153,
+      "char": "ⷴ",
+      "name": "COMBINING CYRILLIC LETTER FITA"
+    },
+    {
+      "idx": 154,
+      "char": "0",
+      "name": "DIGIT ZERO"
+    },
+    {
+      "idx": 155,
+      "char": "1",
+      "name": "DIGIT ONE"
+    },
+    {
+      "idx": 156,
+      "char": "2",
+      "name": "DIGIT TWO"
+    },
+    {
+      "idx": 157,
+      "char": "3",
+      "name": "DIGIT THREE"
+    },
+    {
+      "idx": 158,
+      "char": "4",
+      "name": "DIGIT FOUR"
+    },
+    {
+      "idx": 159,
+      "char": "5",
+      "name": "DIGIT FIVE"
+    },
+    {
+      "idx": 160,
+      "char": "6",
+      "name": "DIGIT SIX"
+    },
+    {
+      "idx": 161,
+      "char": "7",
+      "name": "DIGIT SEVEN"
+    },
+    {
+      "idx": 162,
+      "char": "8",
+      "name": "DIGIT EIGHT"
+    },
+    {
+      "idx": 163,
+      "char": "9",
+      "name": "DIGIT NINE"
+    },
+    {
+      "idx": 164,
+      "char": "",
+      "name": "UNKNOWN"
+    },
+    {
+      "idx": 165,
+      "char": "",
+      "name": "UNKNOWN"
+    },
+    {
+      "idx": 166,
+      "char": "<unk>",
+      "name": "unknown"
+    }
+  ],
+  "normalization_map": {
+    "note": "Unicode-distance для Needleman-Wunsch: пары с расстоянием 1",
+    "pairs": [
+      [
+        "ѣ",
+        "е"
+      ],
+      [
+        "і",
+        "и"
+      ],
+      [
+        "ѵ",
+        "и"
+      ],
+      [
+        "ꙋ",
+        "у"
+      ],
+      [
+        "ѡ",
+        "о"
+      ],
+      [
+        "ѧ",
+        "я"
+      ],
+      [
+        "ѫ",
+        "у"
+      ],
+      [
+        "ѳ",
+        "ф"
+      ]
+    ]
+  }
+}

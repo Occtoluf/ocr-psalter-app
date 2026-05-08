@@ -1,0 +1,8 @@
+{
+  "status": "metadata_package_created",
+  "coreml_package_created": false,
+  "blocked_by": "Current Linux environment has no torch, numpy, pip, or coremltools installed.",
+  "created_package_dir": "../OCRPsalterApp/Resources/ModelResources/mobile_model_v1",
+  "expected_coreml_output": "../OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlpackage",
+  "rerun_command": "python Mobile-app/Model/convert_to_coreml.py"
+}

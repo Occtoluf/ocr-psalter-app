@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010000000000000000000001 /* OCRPsalterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000001 /* OCRPsalterApp.swift */; };
+		010000000000000000000002 /* RecognizedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000002 /* RecognizedLine.swift */; };
+		010000000000000000000003 /* RecognizedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000003 /* RecognizedPage.swift */; };
+		010000000000000000000004 /* LineCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000004 /* LineCandidate.swift */; };
+		010000000000000000000005 /* ModelMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000005 /* ModelMetadata.swift */; };
+		010000000000000000000006 /* Vocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000006 /* Vocab.swift */; };
+		010000000000000000000007 /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000007 /* OCRService.swift */; };
+		010000000000000000000008 /* CTCDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000008 /* CTCDecoder.swift */; };
+		010000000000000000000009 /* LineImagePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000009 /* LineImagePreprocessor.swift */; };
+		01000000000000000000000A /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000A /* ImageUtilities.swift */; };
+		01000000000000000000000B /* PageLineSegmenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000B /* PageLineSegmenter.swift */; };
+		01000000000000000000000C /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000C /* HistoryStore.swift */; };
+		01000000000000000000000D /* DocumentScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000D /* DocumentScannerView.swift */; };
+		01000000000000000000000E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000E /* HomeView.swift */; };
+		01000000000000000000000F /* ScanPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000F /* ScanPageView.swift */; };
+		010000000000000000000010 /* LineReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000010 /* LineReviewView.swift */; };
+		010000000000000000000011 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000011 /* ResultView.swift */; };
+		010000000000000000000012 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000012 /* HistoryView.swift */; };
+		010000000000000000000013 /* SingleLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000013 /* SingleLineView.swift */; };
+		010000000000000000000019 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000021 /* EmptyStateView.swift */; };
+		010000000000000000000014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000014 /* Assets.xcassets */; };
+		010000000000000000000015 /* ModelResources in Resources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000015 /* ModelResources */; };
+		010000000000000000000016 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020000000000000000000016 /* CoreML.framework */; };
+		010000000000000000000017 /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020000000000000000000017 /* VisionKit.framework */; };
+		010000000000000000000018 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020000000000000000000018 /* PhotosUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		020000000000000000000001 /* OCRPsalterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRPsalterApp.swift; sourceTree = "<group>"; };
+		020000000000000000000002 /* RecognizedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedLine.swift; sourceTree = "<group>"; };
+		020000000000000000000003 /* RecognizedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedPage.swift; sourceTree = "<group>"; };
+		020000000000000000000004 /* LineCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCandidate.swift; sourceTree = "<group>"; };
+		020000000000000000000005 /* ModelMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMetadata.swift; sourceTree = "<group>"; };
+		020000000000000000000006 /* Vocab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocab.swift; sourceTree = "<group>"; };
+		020000000000000000000007 /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
+		020000000000000000000008 /* CTCDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTCDecoder.swift; sourceTree = "<group>"; };
+		020000000000000000000009 /* LineImagePreprocessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineImagePreprocessor.swift; sourceTree = "<group>"; };
+		02000000000000000000000A /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
+		02000000000000000000000B /* PageLineSegmenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLineSegmenter.swift; sourceTree = "<group>"; };
+		02000000000000000000000C /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
+		02000000000000000000000D /* DocumentScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentScannerView.swift; sourceTree = "<group>"; };
+		02000000000000000000000E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		02000000000000000000000F /* ScanPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPageView.swift; sourceTree = "<group>"; };
+		020000000000000000000010 /* LineReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineReviewView.swift; sourceTree = "<group>"; };
+		020000000000000000000011 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		020000000000000000000012 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		020000000000000000000013 /* SingleLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineView.swift; sourceTree = "<group>"; };
+		020000000000000000000021 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		020000000000000000000014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		020000000000000000000015 /* ModelResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ModelResources; sourceTree = "<group>"; };
+		020000000000000000000016 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		020000000000000000000017 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
+		020000000000000000000018 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		020000000000000000000019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		020000000000000000000020 /* OCRPsalterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRPsalterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		030000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010000000000000000000016 /* CoreML.framework in Frameworks */,
+				010000000000000000000017 /* VisionKit.framework in Frameworks */,
+				010000000000000000000018 /* PhotosUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		040000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				040000000000000000000002 /* OCRPsalterApp */,
+				040000000000000000000008 /* Frameworks */,
+				040000000000000000000009 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		040000000000000000000002 /* OCRPsalterApp */ = {
+			isa = PBXGroup;
+			children = (
+				040000000000000000000003 /* Application */,
+				040000000000000000000004 /* Models */,
+				040000000000000000000005 /* Services */,
+				040000000000000000000006 /* Views */,
+				040000000000000000000007 /* Resources */,
+			);
+			path = OCRPsalterApp;
+			sourceTree = "<group>";
+		};
+		040000000000000000000003 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000001 /* OCRPsalterApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		040000000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000002 /* RecognizedLine.swift */,
+				020000000000000000000003 /* RecognizedPage.swift */,
+				020000000000000000000004 /* LineCandidate.swift */,
+				020000000000000000000005 /* ModelMetadata.swift */,
+				020000000000000000000006 /* Vocab.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		040000000000000000000005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000007 /* OCRService.swift */,
+				020000000000000000000008 /* CTCDecoder.swift */,
+				020000000000000000000009 /* LineImagePreprocessor.swift */,
+				02000000000000000000000A /* ImageUtilities.swift */,
+				02000000000000000000000B /* PageLineSegmenter.swift */,
+				02000000000000000000000C /* HistoryStore.swift */,
+				02000000000000000000000D /* DocumentScannerView.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		040000000000000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02000000000000000000000E /* HomeView.swift */,
+				02000000000000000000000F /* ScanPageView.swift */,
+				020000000000000000000010 /* LineReviewView.swift */,
+				020000000000000000000011 /* ResultView.swift */,
+				020000000000000000000012 /* HistoryView.swift */,
+				020000000000000000000013 /* SingleLineView.swift */,
+				020000000000000000000021 /* EmptyStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		040000000000000000000007 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000019 /* Info.plist */,
+				020000000000000000000014 /* Assets.xcassets */,
+				020000000000000000000015 /* ModelResources */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		040000000000000000000008 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000016 /* CoreML.framework */,
+				020000000000000000000017 /* VisionKit.framework */,
+				020000000000000000000018 /* PhotosUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		040000000000000000000009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000020 /* OCRPsalterApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		050000000000000000000001 /* OCRPsalterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A0000000000000000000002 /* Build configuration list for PBXNativeTarget "OCRPsalterApp" */;
+			buildPhases = (
+				060000000000000000000001 /* Sources */,
+				030000000000000000000001 /* Frameworks */,
+				070000000000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCRPsalterApp;
+			productName = OCRPsalterApp;
+			productReference = 020000000000000000000020 /* OCRPsalterApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		080000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					050000000000000000000001 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 0A0000000000000000000001 /* Build configuration list for PBXProject "OCRPsalterApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ru;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ru,
+				en,
+				Base,
+			);
+			mainGroup = 040000000000000000000001;
+			productRefGroup = 040000000000000000000009 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				050000000000000000000001 /* OCRPsalterApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		070000000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010000000000000000000014 /* Assets.xcassets in Resources */,
+				010000000000000000000015 /* ModelResources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		060000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010000000000000000000001 /* OCRPsalterApp.swift in Sources */,
+				010000000000000000000002 /* RecognizedLine.swift in Sources */,
+				010000000000000000000003 /* RecognizedPage.swift in Sources */,
+				010000000000000000000004 /* LineCandidate.swift in Sources */,
+				010000000000000000000005 /* ModelMetadata.swift in Sources */,
+				010000000000000000000006 /* Vocab.swift in Sources */,
+				010000000000000000000007 /* OCRService.swift in Sources */,
+				010000000000000000000008 /* CTCDecoder.swift in Sources */,
+				010000000000000000000009 /* LineImagePreprocessor.swift in Sources */,
+				01000000000000000000000A /* ImageUtilities.swift in Sources */,
+				01000000000000000000000B /* PageLineSegmenter.swift in Sources */,
+				01000000000000000000000C /* HistoryStore.swift in Sources */,
+				01000000000000000000000D /* DocumentScannerView.swift in Sources */,
+				01000000000000000000000E /* HomeView.swift in Sources */,
+				01000000000000000000000F /* ScanPageView.swift in Sources */,
+				010000000000000000000010 /* LineReviewView.swift in Sources */,
+				010000000000000000000011 /* ResultView.swift in Sources */,
+				010000000000000000000012 /* HistoryView.swift in Sources */,
+				010000000000000000000013 /* SingleLineView.swift in Sources */,
+				010000000000000000000019 /* EmptyStateView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		090000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		090000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		090000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OCRPsalterApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.occtoluf.ocrpsalter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		090000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OCRPsalterApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.occtoluf.ocrpsalter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A0000000000000000000001 /* Build configuration list for PBXProject "OCRPsalterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090000000000000000000001 /* Debug */,
+				090000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A0000000000000000000002 /* Build configuration list for PBXNativeTarget "OCRPsalterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090000000000000000000003 /* Debug */,
+				090000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 080000000000000000000001 /* Project object */;
+}

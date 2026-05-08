@@ -1,0 +1,28 @@
+{
+  "input_name": "line_image",
+  "input_shape": [
+    1,
+    1,
+    48,
+    1024
+  ],
+  "color_space": "grayscale",
+  "resize": {
+    "height": 48,
+    "keep_aspect_ratio": true,
+    "pad_to_width": 1024,
+    "pad_value": 1.0,
+    "overflow": "scale_down_or_center_crop_after_review"
+  },
+  "pixel_range": [
+    0.0,
+    1.0
+  ],
+  "normalization": "uint8 / 255.0",
+  "text_color": "dark_pixels_near_0",
+  "background_color": "white_pixels_near_1",
+  "line_padding": {
+    "prefer_extra_top_padding": true,
+    "reason": "titla, breathing marks, accents, and superscript letters"
+  }
+}

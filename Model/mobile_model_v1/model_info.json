@@ -1,0 +1,33 @@
+{
+  "name": "mobile_model_v1",
+  "coreml_model": "CRNNLineRecognizer.mlpackage",
+  "source_checkpoint": "best_train_synth_plus_verified_latest_vocab_current_q20260504_072444.pt",
+  "architecture": "CRNN_CNN_BiLSTM_CTC",
+  "vocab": "vocab.json",
+  "vocab_size": 167,
+  "input_height": 48,
+  "input_width": 1024,
+  "input_channels": 1,
+  "output": {
+    "name": "log_probs",
+    "shape": [
+      "time",
+      1,
+      167
+    ],
+    "activation": "log_softmax"
+  },
+  "decoder": {
+    "type": "ctc_greedy",
+    "blank_index": 0,
+    "collapse_repeats": true,
+    "remove_blank": true
+  },
+  "metrics": {
+    "cer": 0.029,
+    "wer": 0.139,
+    "diacritic_accuracy": 0.885,
+    "source": "RESULTS.md, train queue 20260504_072444"
+  },
+  "export_date": "2026-05-07"
+}

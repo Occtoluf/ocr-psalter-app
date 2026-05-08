@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.pyc
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+
+# The checkpoint is stored in GitHub-safe chunks under Model/checkpoint_parts/.
+Model/*.pt
+!Model/checkpoint_parts/*.part-*
+!Model/checkpoint_parts/SHA256SUMS
+
+# Generated on Mac after running Model/convert_to_coreml.py.
+OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlpackage/
+OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlmodelc/
