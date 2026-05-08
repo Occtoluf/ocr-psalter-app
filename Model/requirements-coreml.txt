@@ -1,3 +1,5 @@
-numpy
+# coremltools / PyTorch binary wheels used for conversion can still be built
+# against NumPy 1.x. NumPy 2.x may fail at import time on macOS.
+numpy<2
 torch
 coremltools

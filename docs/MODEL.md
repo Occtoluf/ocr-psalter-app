@@ -49,6 +49,8 @@ pip install -r Model/requirements-coreml.txt
 python Model/convert_to_coreml.py
 ```
 
+Для ошибки вида `A module that was compiled using NumPy 1.x cannot be run in NumPy 2.x` нужно пересоздать venv или принудительно поставить `numpy<2`.
+
 Скрипт:
 
 1. загружает checkpoint;

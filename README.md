@@ -60,6 +60,12 @@ pip install -r Model/requirements-coreml.txt
 python Model/convert_to_coreml.py
 ```
 
+Если раньше окружение уже было создано с `numpy 2.x`, пересоздайте его или выполните:
+
+```bash
+python -m pip install --force-reinstall "numpy<2"
+```
+
 Если CoreMLTools не сможет сконвертировать модель в `mlprogram`, скрипт автоматически попробует старый формат `neuralnetwork` и сохранит `CRNNLineRecognizer.mlmodel`. Приложение умеет загружать оба варианта.
 
 4. Откройте проект в Xcode ещё раз, убедитесь, что файл появился здесь:
