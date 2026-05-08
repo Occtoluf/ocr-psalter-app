@@ -1,7 +1,10 @@
+import PhotosUI
 import SwiftUI
+import VisionKit
 
 struct ScanPageView: View {
     @State private var isScannerPresented = false
+    @State private var selectedPageItem: PhotosPickerItem?
     @State private var scannedImage: UIImage?
     @State private var candidates: [LineCandidate] = []
     @State private var isSegmenting = false
@@ -35,10 +38,19 @@ struct ScanPageView: View {
 
             List {
                 Section {
-                    Button {
-                        isScannerPresented = true
-                    } label: {
-                        Label(scannedImage == nil ? "Открыть сканер" : "Переснять страницу", systemImage: "camera.viewfinder")
+                    if VNDocumentCameraViewController.isSupported {
+                        Button {
+                            isScannerPresented = true
+                        } label: {
+                            Label(scannedImage == nil ? "Открыть сканер" : "Переснять страницу", systemImage: "camera.viewfinder")
+                        }
+                    } else {
+                        Label("Сканер недоступен в симуляторе", systemImage: "exclamationmark.triangle")
+                            .foregroundStyle(.secondary)
+                    }
+
+                    PhotosPicker(selection: $selectedPageItem, matching: .images) {
+                        Label("Выбрать изображение страницы", systemImage: "photo")
                     }
 
                     if scannedImage != nil {
@@ -84,6 +96,9 @@ struct ScanPageView: View {
         }
         .navigationTitle("Скан страницы")
         .navigationBarTitleDisplayMode(.inline)
+        .onChange(of: selectedPageItem) { item in
+            loadPageImage(item)
+        }
         .sheet(isPresented: $isScannerPresented) {
             DocumentScannerView { images in
                 guard let first = images.first else {
@@ -92,6 +107,22 @@ struct ScanPageView: View {
                 scannedImage = first
                 segment(first)
             } onCancel: {}
+        }
+    }
+
+    private func loadPageImage(_ item: PhotosPickerItem?) {
+        guard let item else {
+            return
+        }
+
+        Task {
+            if let data = try? await item.loadTransferable(type: Data.self),
+               let image = UIImage(data: data) {
+                scannedImage = image
+                segment(image)
+            } else {
+                errorMessage = "Не удалось открыть выбранное изображение."
+            }
         }
     }
 

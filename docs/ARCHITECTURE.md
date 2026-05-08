@@ -26,6 +26,7 @@ VisionKit scan
 
 - `HomeView` - основной экран: скан страницы, одна строка, история.
 - `ScanPageView` - запуск `VNDocumentCameraViewController` и первичная сегментация.
+- В iOS Simulator `VNDocumentCameraViewController` недоступен, поэтому `ScanPageView` даёт fallback через выбор изображения из Photos.
 - `LineReviewView` - список найденных строк с переключателями.
 - `SingleLineView` - резервный режим для проверки CRNN без page segmentation.
 - `ResultView` - редактирование, копирование, сохранение.

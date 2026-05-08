@@ -82,6 +82,8 @@ OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlmode
 
 5. Запустите приложение на iPhone. Сканер документов `VisionKit` лучше проверять на реальном устройстве.
 
+В iOS Simulator системный document scanner недоступен. Для проверки в симуляторе используйте кнопку `Выбрать изображение страницы`.
+
 ## Модель
 
 В репозиторий включён checkpoint:
