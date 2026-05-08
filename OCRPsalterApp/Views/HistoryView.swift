@@ -23,7 +23,7 @@ struct HistoryView: View {
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                             Text(page.preview)
-                                .font(.subheadline)
+                                .font(AppFonts.ponomar(size: 17))
                                 .lineLimit(2)
                                 .foregroundStyle(.secondary)
                         }

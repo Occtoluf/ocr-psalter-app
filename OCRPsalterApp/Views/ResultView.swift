@@ -45,7 +45,7 @@ struct ResultView: View {
                         }
 
                         TextEditor(text: $line.text)
-                            .font(.body)
+                            .font(AppFonts.ponomar(size: 22))
                             .frame(minHeight: 58)
                             .textInputAutocapitalization(.never)
                             .autocorrectionDisabled()

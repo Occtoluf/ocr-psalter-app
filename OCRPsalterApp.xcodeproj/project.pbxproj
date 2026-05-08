@@ -27,8 +27,10 @@
 		010000000000000000000012 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000012 /* HistoryView.swift */; };
 		010000000000000000000013 /* SingleLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000013 /* SingleLineView.swift */; };
 		010000000000000000000019 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000021 /* EmptyStateView.swift */; };
+		01000000000000000000001A /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000022 /* AppFonts.swift */; };
 		010000000000000000000014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000014 /* Assets.xcassets */; };
 		010000000000000000000015 /* ModelResources in Resources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000015 /* ModelResources */; };
+		01000000000000000000001B /* PonomarUnicode.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000023 /* PonomarUnicode.ttf */; };
 		010000000000000000000016 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020000000000000000000016 /* CoreML.framework */; };
 		010000000000000000000017 /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020000000000000000000017 /* VisionKit.framework */; };
 		010000000000000000000018 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020000000000000000000018 /* PhotosUI.framework */; };
@@ -55,8 +57,10 @@
 		020000000000000000000012 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		020000000000000000000013 /* SingleLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineView.swift; sourceTree = "<group>"; };
 		020000000000000000000021 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		020000000000000000000022 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		020000000000000000000014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		020000000000000000000015 /* ModelResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ModelResources; sourceTree = "<group>"; };
+		020000000000000000000023 /* PonomarUnicode.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PonomarUnicode.ttf; sourceTree = "<group>"; };
 		020000000000000000000016 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		020000000000000000000017 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
 		020000000000000000000018 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
@@ -143,6 +147,7 @@
 				020000000000000000000012 /* HistoryView.swift */,
 				020000000000000000000013 /* SingleLineView.swift */,
 				020000000000000000000021 /* EmptyStateView.swift */,
+				020000000000000000000022 /* AppFonts.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				020000000000000000000019 /* Info.plist */,
+				020000000000000000000023 /* PonomarUnicode.ttf */,
 				020000000000000000000014 /* Assets.xcassets */,
 				020000000000000000000015 /* ModelResources */,
 			);
@@ -236,6 +242,7 @@
 			files = (
 				010000000000000000000014 /* Assets.xcassets in Resources */,
 				010000000000000000000015 /* ModelResources in Resources */,
+				01000000000000000000001B /* PonomarUnicode.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +273,7 @@
 				010000000000000000000012 /* HistoryView.swift in Sources */,
 				010000000000000000000013 /* SingleLineView.swift in Sources */,
 				010000000000000000000019 /* EmptyStateView.swift in Sources */,
+				01000000000000000000001A /* AppFonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
