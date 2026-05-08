@@ -25,3 +25,9 @@ python Model/convert_to_coreml.py
 ```text
 OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlpackage
 ```
+
+Если `mlprogram`-конвертация не проходит, скрипт автоматически попробует формат `neuralnetwork` и сохранит:
+
+```text
+OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlmodel
+```

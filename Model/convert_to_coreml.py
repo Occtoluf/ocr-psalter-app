@@ -140,8 +140,11 @@ def main() -> None:
     parser.add_argument("--height", type=int, default=48)
     parser.add_argument("--width", type=int, default=1024)
     parser.add_argument("--lstm-hidden", type=int, default=256)
-    parser.add_argument("--deployment-target", default="iOS16")
+    parser.add_argument("--deployment-target", default="iOS17")
+    parser.add_argument("--convert-to", choices=["mlprogram", "neuralnetwork"], default="mlprogram")
     parser.add_argument("--output-name", default="CRNNLineRecognizer.mlpackage")
+    parser.add_argument("--no-fallback-neuralnetwork", action="store_true",
+                        help="Do not try the older neuralnetwork converter if mlprogram fails.")
     parser.add_argument("--skip-coreml", action="store_true",
                         help="Only refresh package metadata, do not convert the model.")
     args = parser.parse_args()
@@ -213,7 +216,7 @@ def main() -> None:
                 ConvBlock(512, 512),
                 nn.MaxPool2d((2, 1)),
                 ConvBlock(512, 512),
-                nn.AdaptiveAvgPool2d((1, None)),
+                HeightMeanPool(),
             )
             self.lstm = nn.LSTM(
                 input_size=512,
@@ -234,6 +237,18 @@ def main() -> None:
             out = self.fc(out)
             return self.log_softmax(out)
 
+    class HeightMeanPool(nn.Module):
+        """Equivalent to AdaptiveAvgPool2d((1, None)) for fixed mobile export.
+
+        CoreMLTools can fail on PyTorch graphs containing an adaptive pool with
+        `None` in the output size. The training model uses that layer only to
+        average height from 3 to 1 while preserving width, so a direct mean over
+        the height axis is an export-safe equivalent.
+        """
+
+        def forward(self, x):
+            return x.mean(dim=2, keepdim=True)
+
     model = CRNN(num_classes=vocab_size, lstm_hidden=args.lstm_hidden)
     state_dict = strip_module_prefix(load_checkpoint_state(torch, checkpoint_path))
     model.load_state_dict(state_dict, strict=True)
@@ -241,46 +256,69 @@ def main() -> None:
 
     example = torch.rand(1, 1, args.height, args.width, dtype=torch.float32)
     with torch.no_grad():
-        traced = torch.jit.trace(model, example)
-        traced = torch.jit.freeze(traced)
+        traced = torch.jit.trace(model, example, strict=False)
 
-    target = getattr(ct.target, args.deployment_target)
-    mlmodel = ct.convert(
-        traced,
-        convert_to="mlprogram",
-        minimum_deployment_target=target,
-        inputs=[
-            ct.TensorType(
-                name="line_image",
-                shape=example.shape,
-                dtype=np.float32,
-            )
-        ],
-        outputs=[ct.TensorType(name="log_probs", dtype=np.float32)],
-    )
+    def convert_once(convert_to: str):
+        if convert_to == "neuralnetwork":
+            target = ct.target.iOS14
+            outputs = [ct.TensorType(name="log_probs")]
+        else:
+            target = getattr(ct.target, args.deployment_target, ct.target.iOS16)
+            outputs = [ct.TensorType(name="log_probs", dtype=np.float32)]
 
-    mlmodel.short_description = (
-        "CRNN line OCR model for printed Church Slavonic text. "
-        "Input is one grayscale line image."
-    )
-    mlmodel.input_description["line_image"] = (
-        f"Float32 grayscale tensor [1, 1, {args.height}, {args.width}], "
-        "pixels normalized to [0, 1]."
-    )
-    mlmodel.output_description["log_probs"] = (
-        "CTC log probabilities with shape [time, batch, vocab_size]."
-    )
-    mlmodel.author = "OCR Church Slavonic dissertation project"
-    mlmodel.user_defined_metadata.update({
-        "source_checkpoint": checkpoint_path.name,
-        "vocab_size": str(vocab_size),
-        "input_height": str(args.height),
-        "input_width": str(args.width),
-        "decoder": "ctc_greedy_blank_0",
-        "cer": "0.029",
-        "wer": "0.139",
-        "diacritic_accuracy": "0.885",
-    })
+        return ct.convert(
+            traced,
+            convert_to=convert_to,
+            minimum_deployment_target=target,
+            inputs=[
+                ct.TensorType(
+                    name="line_image",
+                    shape=example.shape,
+                    dtype=np.float32,
+                )
+            ],
+            outputs=outputs,
+        )
+
+    actual_convert_to = args.convert_to
+    try:
+        mlmodel = convert_once(actual_convert_to)
+    except Exception as exc:
+        if args.convert_to != "mlprogram" or args.no_fallback_neuralnetwork:
+            raise
+        print("mlprogram conversion failed; retrying with neuralnetwork format.")
+        print(f"Original error: {exc}")
+        actual_convert_to = "neuralnetwork"
+        mlmodel = convert_once(actual_convert_to)
+        if args.output_name == "CRNNLineRecognizer.mlpackage":
+            output_path = package_dir / "CRNNLineRecognizer.mlmodel"
+
+    try:
+        mlmodel.short_description = (
+            "CRNN line OCR model for printed Church Slavonic text. "
+            "Input is one grayscale line image."
+        )
+        mlmodel.input_description["line_image"] = (
+            f"Float32 grayscale tensor [1, 1, {args.height}, {args.width}], "
+            "pixels normalized to [0, 1]."
+        )
+        mlmodel.output_description["log_probs"] = (
+            "CTC log probabilities with shape [time, batch, vocab_size]."
+        )
+        mlmodel.author = "OCR Church Slavonic dissertation project"
+        mlmodel.user_defined_metadata.update({
+            "source_checkpoint": checkpoint_path.name,
+            "vocab_size": str(vocab_size),
+            "input_height": str(args.height),
+            "input_width": str(args.width),
+            "decoder": "ctc_greedy_blank_0",
+            "cer": "0.029",
+            "wer": "0.139",
+            "diacritic_accuracy": "0.885",
+            "coreml_format": actual_convert_to,
+        })
+    except Exception:
+        pass
 
     if output_path.exists():
         if output_path.is_dir():
@@ -288,6 +326,15 @@ def main() -> None:
         else:
             output_path.unlink()
     mlmodel.save(output_path)
+    write_package_metadata(
+        package_dir=package_dir,
+        checkpoint_path=checkpoint_path,
+        vocab_path=vocab_path,
+        input_width=args.width,
+        input_height=args.height,
+        vocab_size=vocab_size,
+        mlpackage_name=output_path.name,
+    )
     print(f"Core ML package saved: {output_path}")
 
 

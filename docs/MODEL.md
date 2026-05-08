@@ -57,6 +57,14 @@ python Model/convert_to_coreml.py
 4. конвертирует модель через `coremltools`;
 5. сохраняет `CRNNLineRecognizer.mlpackage` в ресурсы iOS-приложения.
 
+Если CoreMLTools падает на `mlprogram`-конвертации CRNN/LSTM-графа, скрипт автоматически пробует `neuralnetwork` fallback и сохраняет:
+
+```text
+OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlmodel
+```
+
+Приложение ищет `.mlmodelc`, `.mlpackage` и `.mlmodel`, поэтому оба формата подходят.
+
 ## Параметры входа
 
 ```json

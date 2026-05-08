@@ -60,10 +60,18 @@ pip install -r Model/requirements-coreml.txt
 python Model/convert_to_coreml.py
 ```
 
+Если CoreMLTools не сможет сконвертировать модель в `mlprogram`, скрипт автоматически попробует старый формат `neuralnetwork` и сохранит `CRNNLineRecognizer.mlmodel`. Приложение умеет загружать оба варианта.
+
 4. Откройте проект в Xcode ещё раз, убедитесь, что файл появился здесь:
 
 ```text
 OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlpackage
+```
+
+или, если сработал fallback:
+
+```text
+OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlmodel
 ```
 
 5. Запустите приложение на iPhone. Сканер документов `VisionKit` лучше проверять на реальном устройстве.
