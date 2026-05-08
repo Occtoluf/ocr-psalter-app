@@ -90,7 +90,7 @@ def write_package_metadata(
             "overflow": "scale_down_or_center_crop_after_review",
         },
         "pixel_range": [0.0, 1.0],
-        "normalization": "uint8 / 255.0",
+        "normalization": "Otsu binarization, then uint8 / 255.0",
         "text_color": "dark_pixels_near_0",
         "background_color": "white_pixels_near_1",
         "line_padding": {

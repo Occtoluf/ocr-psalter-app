@@ -73,11 +73,11 @@ OCRPsalterApp/Resources/ModelResources/mobile_model_v1/CRNNLineRecognizer.mlmode
 {
   "input_shape": [1, 1, 48, 1024],
   "color_space": "grayscale",
-  "normalization": "uint8 / 255.0"
+  "normalization": "Otsu binarization, then uint8 / 255.0"
 }
 ```
 
-Строка масштабируется до высоты `48 px`; если ширина меньше `1024`, справа добавляется белый фон.
+Строка масштабируется до высоты `48 px`; если ширина меньше `1024`, справа добавляется белый фон. После этого iOS-приложение бинаризует кроп методом Otsu и очищает плотные тёмные полосы у краёв.
 
 ## Декодирование
 
